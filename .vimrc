@@ -135,7 +135,6 @@ nnoremap <silent> -     :wincmd -<CR>
 nnoremap <silent> <     :wincmd <<CR>
 nnoremap <silent> >     :wincmd ><CR>
 
-
 "--------------------- Plugin Setting ---------------------
 
 " --- vim-markdown
@@ -145,33 +144,6 @@ let g:vim_markdown_no_default_key_mappings=1
 
 " --- rainbow
 let g:rainbow_active = 1
-let g:rainbow_conf = {
-  \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-  \   'ctermfgs': ['red', 'lightblue', 'lightyellow', 'green', 'darkmagenta'],
-  \   'operators': '_,_',
-  \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-  \   'separately': {
-  \       '*': {},
-  \       'tex': {
-  \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-  \       },
-  \       'lisp': {
-  \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-  \       },
-  \       'vim': {
-  \           'parentheses': ['start=/(/ end=/)/',
-  \                           'start=/\[/ end=/\]/',
-  \                           'start=/{/ end=/}/ fold',
-  \                           'start=/(/ end=/)/ containedin=vimFuncBody',
-  \                           'start=/\[/ end=/\]/ containedin=vimFuncBody',
-  \                           'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-  \       },
-  \       'html': {
-  \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-  \       },
-  \       'css': 0,
-  \   }
-  \}
 
 " --- clang format
 let g:clang_format#style_options = {
@@ -226,11 +198,22 @@ endif
 
 " --- toggle mouse
 function! Toggle_Mouse()
-    if &mouse == 'a'
-      set mouse=
-    else
-      set mouse=a
-    endif
+  if &mouse == 'a'
+    set mouse=
+  else
+    set mouse=a
+  endif
 endfunc
 noremap <silent> <F10> :call Toggle_Mouse() <Enter>
+
+" --- toggle code guide line
+highlight ColorColumn ctermbg=235
+function! Toggle_Code_Guide_Line()
+  if &colorcolumn == 0
+    let &colorcolumn=join(range(81,10000),",")
+  else
+    let &colorcolumn=0
+  endif
+endfunc
+noremap <silent> <F11> :call Toggle_Code_Guide_Line() <Enter>
 
