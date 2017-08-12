@@ -63,6 +63,8 @@ Plugin 'flazz/vim-colorschemes'
 " ------- Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" ------- JSON
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 filetype plugin indent on
@@ -196,6 +198,9 @@ let g:vue_default_script_lang = 'javascript'
 let g:vue_default_template_lang = 'pug'
 let g:vue_default_style_lang = 'sass'
 let g:vue_tag_color = 'Blue'
+
+" --- json
+let g:vim_json_syntax_conceal = 0
 
 "--------------------- Custom Script ---------------------
 
