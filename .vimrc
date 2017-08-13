@@ -45,11 +45,11 @@ Plugin 'wavded/vim-stylus'
 Plugin 'tpope/vim-haml'
 Plugin 'hzue/vim-vue'
 " ------- Javascript
-Plugin 'mxw/vim-jsx'
-Plugin 'gkz/vim-ls'
-Plugin 'gavocanov/vim-js-indent'
-Plugin 'othree/es.next.syntax.vim'
 Plugin 'othree/yajs.vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'gavocanov/vim-js-indent'
+Plugin 'gkz/vim-ls'
 " ------- Markdown
 Plugin 'plasticboy/vim-markdown'
 " ------- Perl
@@ -72,6 +72,7 @@ filetype plugin indent on
 "--------------------- General Setting ---------------------
 syntax on
 set nu
+set numberwidth=1
 set cursorline
 set wildmenu
 set ruler
@@ -156,9 +157,10 @@ let g:clang_format#style_options = {
 \ }
 
 " --- code color & theme
-" colorscheme Tomorrow-Night-Eightie
-colorscheme itg_flat
-highlight Comment ctermfg = lightblue
+" colorscheme Tomorrow-Night-Eighties
+" colorscheme itg_flat
+colorscheme monokai
+" highlight Comment ctermfg = lightblue
 let g:airline_theme='simple'
 
 " --- gitgutter
@@ -206,7 +208,7 @@ function! Toggle_Mouse()
 endfunc
 noremap <silent> <F10> :call Toggle_Mouse() <Enter>
 
-" --- toggle code guide line
+" --- toggle 80 coding line
 highlight ColorColumn ctermbg=235
 function! Toggle_Code_Guide_Line()
   if &colorcolumn == 0
