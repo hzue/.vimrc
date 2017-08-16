@@ -176,6 +176,9 @@ let g:vue_tag_color = 'Blue'
 " --- json
 let g:vim_json_syntax_conceal = 0
 
+" --- python-syntax
+let python_highlight_all = 1
+
 "--------------------- Custom Script ---------------------
 
 " --- simple tab auto complete
