@@ -1,0 +1,20 @@
+[user]
+	name =
+	email =
+[alias]
+    br = branch
+    d = difftool
+	st = status
+	l = log --graph --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
+	a = add
+	s = status -s
+	ci = commit -m
+	co = checkout
+[color]
+	ui = true
+[difftool]
+    prompt = false
+[push]
+	default = simple
+[url "https://"]
+	insteadOf = git://
