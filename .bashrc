@@ -100,6 +100,12 @@ function old() {
     find . -maxdepth 1 -mtime +${day} $@
 }
 
+function _ls() {
+    LANG=zh_TW.BIG5
+    /bin/ls -C --color=always $@ #| /usr/bin/iconv -f big5 -t utf8
+    LANG=zh_TW.UTF-8
+}
+
 
 export PERL_LOCAL_LIB_ROOT="/usr/local/lib/perl5";
 export PERL_MB_OPT="--install_base /usr/local/lib/perl5";

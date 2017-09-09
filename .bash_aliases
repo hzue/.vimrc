@@ -25,11 +25,6 @@ alias ....='cd ../../../'                     # Go back 3 directory levels
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-function _ls() {
-    LANG=zh_TW.BIG5
-    /bin/ls -C --color=always $@ #| /usr/bin/iconv -f big5 -t utf8
-    LANG=zh_TW.UTF-8
-}
 
 # rm
 alias rm='_rm'
