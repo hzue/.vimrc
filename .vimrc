@@ -65,6 +65,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " ------- JSON
 Plugin 'elzr/vim-json'
+" ------- Docker
+Plugin 'ekalinin/Dockerfile.vim'
 
 call vundle#end()
 filetype plugin indent on
