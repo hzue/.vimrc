@@ -19,7 +19,7 @@ cd() { builtin cd "$@"; ls; }               # Always list directory contents upo
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
-alias ....='cd ../../../'                     # Go back 3 directory levels
+alias ....='cd ../../../'                   # Go back 3 directory levels
 
 # ls
 alias ll='ls -l'
