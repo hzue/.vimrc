@@ -119,6 +119,7 @@ nnoremap <silent> <     :wincmd <<CR>
 nnoremap <silent> >     :wincmd ><CR>
 
 nnoremap <silent> <C-p> :Fzf <CR>
+nnoremap <silent> <C-i> :FzfAg <CR>
 
 " noremap <C-L> <Esc>:tabnext<CR>
 " noremap <C-H> <Esc>:tabprevious<CR>
@@ -168,6 +169,8 @@ let g:fzf_action = {
 let g:fzf_buffers_jump = 1
 autocmd VimEnter * command! Fzf
   \ call fzf#vim#files(<q-args>, {'left': '50%', 'options': '--reverse --prompt=""'})
+autocmd VimEnter * command! FzfAg
+  \ call fzf#vim#ag(<q-args>, {'left': '80%', 'options': '-e --reverse --prompt=""'})
 
 
 " -------- Custom Script
