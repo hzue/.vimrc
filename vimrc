@@ -119,7 +119,7 @@ nnoremap <silent> <     :wincmd <<CR>
 nnoremap <silent> >     :wincmd ><CR>
 
 nnoremap <silent> <C-p> :Fzf <CR>
-nnoremap <silent> <C-i> :FzfAg <CR>
+nnoremap <silent> <C-g> :FzfAg <CR>
 
 " noremap <C-L> <Esc>:tabnext<CR>
 " noremap <C-H> <Esc>:tabprevious<CR>
